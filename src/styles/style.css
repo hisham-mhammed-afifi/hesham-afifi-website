@@ -1,0 +1,260 @@
+:root {
+  --bg-primary: #f7f7f8;
+  --bg-secondary: #efeff0;
+  --text-dark: #222222;
+  --text-light: #eeeeee;
+  --btn-primary: #1f1f1f;
+  --btn-secondary: transparent;
+  --max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  margin: 0;
+  height: 100vh;
+}
+
+/* #region -- HTML tags section -- */
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h2,
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.02;
+  margin: 0;
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+h2 {
+  font-size: calc(1.2rem + 0.9vw);
+}
+h3 {
+  font-size: calc(1rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+p,
+a {
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  max-width: 70ch;
+}
+
+ul {
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+}
+
+a:not([class]),
+a:not([class]):hover {
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* #endregion */
+
+/* #region -- navbar section -- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 320px;
+}
+
+.nav-item {
+  padding: 0.3rem 0.7rem;
+}
+
+.nav-item:hover {
+  padding: 0.3rem 0.7rem;
+}
+
+.nav-item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  text-align: center;
+}
+/* #endregion */
+
+/* #region -- general sections -- */
+section {
+  min-height: 80vh;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 765px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+/* #endregion */
+
+/* #region -- margin & padding section -- */
+.mt-3 {
+  margin-top: 1rem;
+}
+/* #endregion */
+
+/* #region -- buttons section -- */
+.btn {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  padding: 0.3rem 1.5rem;
+  margin: 0.7rem 0;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary);
+  color: #fff;
+  filter: invert(0);
+  transition: all 0.2s ease-in;
+}
+
+.btn-primary:hover {
+  filter: invert(1);
+  transition: all 0.2s ease-in;
+}
+
+.btn-link {
+  background-color: transparent;
+  color: var(--btn-primary);
+  filter: drop-shadow(0);
+  transition: all 0.2s ease-out;
+}
+
+.btn-link:hover {
+  filter: drop-shadow(0 0 0.5rem dodgerblue);
+  transition: all 0.5s ease-in;
+}
+/* #endregion */
+
+/* #region -- hero section -- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.title {
+  letter-spacing: 1px;
+}
+
+.obj {
+  max-width: 50ch;
+}
+
+.cta {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cta .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* #endregion */
+
+/* #region -- navbar section -- */
+.nav-items {
+}
+/* #endregion */
+/* #region -- navbar section -- */
+.nav-items {
+}
+/* #endregion */
