@@ -266,6 +266,7 @@ section {
 /* #endregion */
 
 /* #region -- footer section -- */
+
 .social-icons {
   max-width: 300px;
 }
@@ -281,7 +282,6 @@ section {
 
 #scrollContainer > * {
   display: inline-block;
-  width: 50vw;
   text-align: center;
   padding: 1rem 2rem;
   filter: grayscale(1);
@@ -292,20 +292,12 @@ section {
   filter: grayscale(0);
 }
 
-#scrollContainer:first-child {
-  background-color: tomato;
-  color: #fff;
-}
-#scrollContainer:last-child {
-  background-color: gold;
-}
-
 @keyframes slide {
   0% {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-120vw, 0, 0); /* The image width */
+    transform: translateX(-1870px); /* The image width */
   }
 }
 
