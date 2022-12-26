@@ -267,6 +267,10 @@ section {
 
 /* #region -- footer section -- */
 
+footer p {
+  margin-bottom: 0;
+}
+
 .social-icons {
   max-width: 300px;
 }
