@@ -145,6 +145,7 @@ a:active {
 
 .logo {
   text-align: center;
+  margin: 0 1rem;
 }
 /* #endregion */
 
@@ -331,7 +332,8 @@ footer p {
 }
 
 .social-icons {
-  max-width: 300px;
+  max-width: 320px;
+  min-width: 260px;
 }
 /* #endregion */
 
