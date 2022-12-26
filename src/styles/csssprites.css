@@ -1,0 +1,59 @@
+.bg-angular {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -10px -10px;
+}
+
+.bg-css3 {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -60px -10px;
+}
+
+.bg-html_5 {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -10px -60px;
+}
+
+.bg-javascript {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -60px -60px;
+}
+
+.bg-mongodb {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -110px -10px;
+}
+
+.bg-node_js {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -110px -60px;
+}
+
+.bg-react {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -10px -110px;
+}
+
+.bg-typescript {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -60px -110px;
+}
+
+.bg-redux {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -110px -110px;
+}
+
+.bg-webpack {
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -160px -10px;
+}
