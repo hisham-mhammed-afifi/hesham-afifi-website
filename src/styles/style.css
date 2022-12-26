@@ -290,6 +290,7 @@ textarea:focus {
   width: 100%;
   border: 2px solid var(--text-dark);
   padding: 0.7rem 1rem;
+  outline: none;
 }
 /* #endregion */
 
