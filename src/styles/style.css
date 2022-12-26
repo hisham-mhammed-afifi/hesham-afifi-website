@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -147,10 +151,30 @@ a:active {
 /* #region -- general sections -- */
 section {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: var(--text-dark);
+  margin: 1rem auto;
 }
 
 .container {
   max-width: var(--max-width);
+  min-width: 100%;
   margin: 0 auto;
   padding: 0 0.5rem;
 }
@@ -234,6 +258,41 @@ section {
 
 /* #endregion */
 
+/* #region -- about section -- */
+/* #endregion */
+
+/* #region -- work section -- */
+/* #endregion */
+
+/* #region -- contact section -- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.8rem;
+}
+
+input,
+textarea {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid var(--text-dark);
+  padding: 0.7rem 1rem;
+}
+/* #endregion */
+
+/* #region -- about section -- */
+/* #endregion */
+
 /* #region -- Utils section -- */
 .d-flex {
   display: flex;
@@ -276,7 +335,7 @@ footer p {
 }
 /* #endregion */
 
-#scrollContainer {
+#slider {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -284,7 +343,7 @@ footer p {
   overflow-x: hidden;
 }
 
-#scrollContainer > * {
+#slider > * {
   display: inline-block;
   text-align: center;
   padding: 1rem 2rem;
@@ -292,7 +351,7 @@ footer p {
   animation: slide 30s linear alternate infinite;
 }
 
-#scrollContainer > img:hover {
+#slider > img:hover {
   filter: grayscale(0);
 }
 
