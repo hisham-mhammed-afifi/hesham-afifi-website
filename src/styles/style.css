@@ -37,15 +37,6 @@ body {
 }
 
 /* #region -- HTML tags section -- */
-h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-h2,
-h3 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 h1,
 h2,
 h3 {
@@ -53,6 +44,16 @@ h3 {
   line-height: 1.2;
   letter-spacing: 0.02;
   margin: 0;
+}
+
+h2,
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -96,10 +97,12 @@ ul {
   padding: 0;
 }
 
-a:not([class]),
-a:not([class]):hover {
+a,
+a:focus,
+a:active {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   text-decoration: none;
-  font-size: inherit;
   font-weight: inherit;
   color: inherit;
 }
@@ -107,17 +110,8 @@ a:not([class]):hover {
 /* #endregion */
 
 /* #region -- navbar section -- */
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .nav-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-grow: 1;
   max-width: 320px;
 }
@@ -152,7 +146,7 @@ nav {
 
 /* #region -- general sections -- */
 section {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .container {
@@ -182,11 +176,12 @@ section {
 
 /* #region -- buttons section -- */
 .btn {
+  max-height: 1.8rem;
   text-transform: uppercase;
   font-family: monospace;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
-  padding: 0.3rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   margin: 0.7rem 0;
   border-radius: 1rem;
   display: inline-block;
@@ -194,13 +189,14 @@ section {
 
 .btn-primary {
   background-color: var(--btn-primary);
-  color: #fff;
-  filter: invert(0);
+  color: #fff !important;
+  filter: brightness(0.7);
   transition: all 0.2s ease-in;
 }
 
 .btn-primary:hover {
-  filter: invert(1);
+  color: #fff !important;
+  filter: brightness(1.5);
   transition: all 0.2s ease-in;
 }
 
@@ -219,10 +215,7 @@ section {
 
 /* #region -- hero section -- */
 .hero {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 60vh;
 }
 
@@ -236,25 +229,82 @@ section {
 
 .cta {
   max-width: 500px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+/* #endregion */
+
+/* #region -- Utils section -- */
+.d-flex {
+  display: flex;
+}
+
+.wrap {
   flex-wrap: wrap;
 }
 
-.cta .links {
-  display: flex;
+.justify-content-center {
   justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
   align-items: center;
+}
+
+.text-center {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
 }
 /* #endregion */
 
-/* #region -- navbar section -- */
-.nav-items {
+/* #region -- footer section -- */
+.social-icons {
+  max-width: 300px;
 }
 /* #endregion */
-/* #region -- navbar section -- */
-.nav-items {
+
+#scrollContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+  overflow-x: hidden;
 }
-/* #endregion */
+
+#scrollContainer > * {
+  display: inline-block;
+  width: 50vw;
+  text-align: center;
+  padding: 1rem 2rem;
+  filter: grayscale(1);
+  animation: slide 30s linear alternate infinite;
+}
+
+#scrollContainer > img:hover {
+  filter: grayscale(0);
+}
+
+#scrollContainer:first-child {
+  background-color: tomato;
+  color: #fff;
+}
+#scrollContainer:last-child {
+  background-color: gold;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-120vw, 0, 0); /* The image width */
+  }
+}
